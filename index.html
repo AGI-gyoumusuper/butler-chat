@@ -90,10 +90,10 @@
       <b>【条件】</b><br />
       ・過去2ヶ月以内にCodexを利用していないこと<br />
       ・電話番号認証・クレカ登録等の手続きをクリアできること<br />
-      ・招待後、必ずすぐに Codex で1度メッセージを送ること
+      ・招待後、必ずすぐに Codex で1度メッセージを送ること(PC必須)
     </div>
 
-    <div id="done-note">ありがとうございます。先着3名の方に招待を送らせて頂きます。</div>
+    <div id="done-note">ありがとうございます。先着3名の方に招待を送らせて頂きます。<br />同一人物のメールアドレスは弾かせていただきます</div>
   </div>
 
   <div id="input-area">
@@ -111,7 +111,7 @@
   // 受信内容はそのまま既存のスプレッドシートへ記録される。
   // ※ LLM呼び出しは一切なし。相手側がトークンを消費する経路は存在しない。
   const ENDPOINT = 'https://script.google.com/macros/s/AKfycbz0-MngjHsxx23URJQ322AzU4Kg92B3JB-YcVsiscJoFHVYzlrvLa3KWf1DMs3awnZM/exec';
-  const THANKS = 'ありがとうございます。先着3名の方に招待を送らせて頂きます。';
+  const THANKS = 'ありがとうございます。先着3名の方に招待を送らせて頂きます。同一人物のメールアドレスは弾かせていただきます';
   const BUBBLE_DURATION_MS = 5000;
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
