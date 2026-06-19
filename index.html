@@ -89,7 +89,6 @@
     <div id="cond">
       <b>【条件】</b><br />
       ・過去2ヶ月以内にCodexを利用していないこと<br />
-      ・電話番号認証・クレカ登録等の手続きをクリアできること<br />
       ・招待後、必ずすぐに Codex で1度メッセージを送ること(PC必須)
     </div>
 
@@ -133,10 +132,10 @@
   const SENDER = getSenderId();
 
   function alreadySubmitted() {
-    try { return localStorage.getItem('butler_submitted') === '1'; } catch (e) { return false; }
+    try { return localStorage.getItem('butler_submitted_v2') === '1'; } catch (e) { return false; }
   }
   function markSubmitted() {
-    try { localStorage.setItem('butler_submitted', '1'); } catch (e) {}
+    try { localStorage.setItem('butler_submitted_v2', '1'); } catch (e) {}
   }
 
   let bubbleTimer = null;
