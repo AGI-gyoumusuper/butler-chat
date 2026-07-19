@@ -340,25 +340,6 @@
 
     .email-input:disabled { opacity: .7; }
 
-    .eligibility {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin: 18px 0;
-      color: rgba(255, 255, 255, .77);
-      font-size: 12px;
-      line-height: 1.65;
-      cursor: pointer;
-    }
-
-    .eligibility input {
-      flex: 0 0 18px;
-      width: 18px;
-      height: 18px;
-      margin-top: 1px;
-      accent-color: var(--mint);
-    }
-
     .submit-button {
       display: inline-flex;
       width: 100%;
@@ -533,11 +514,6 @@
               <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
             </div>
 
-            <label class="eligibility">
-              <input id="confirm" type="checkbox" required>
-              <span>上記の応募条件に当てはまることを確認しました。</span>
-            </label>
-
             <button class="submit-button" id="submit-button" type="submit">メールアドレスを送る</button>
             <p class="message" id="form-message" role="status" aria-live="polite"></p>
             <p class="privacy">お預かりしたメールアドレスは、今回の友達招待にのみ使用します。招待の適用可否は、送付時の判定によって決まります。</p>
@@ -566,7 +542,6 @@
     const form = document.getElementById("invite-form");
     const formContent = document.getElementById("form-content");
     const emailInput = document.getElementById("email");
-    const confirmInput = document.getElementById("confirm");
     const websiteInput = document.getElementById("website");
     const submitButton = document.getElementById("submit-button");
     const message = document.getElementById("form-message");
@@ -605,12 +580,6 @@
         emailInput.focus();
         return;
       }
-      if (!confirmInput.checked) {
-        message.textContent = "応募条件をご確認のうえ、チェックを入れてください。";
-        confirmInput.focus();
-        return;
-      }
-
       if (websiteInput.value) {
         showSuccess();
         return;
