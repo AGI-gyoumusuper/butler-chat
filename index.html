@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102a43">
-  <meta name="description" content="ChatGPT Proの友達招待キャンペーン。対象条件を満たす方から先着10名を受付中です。">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="ChatGPT Proの友達招待キャンペーンは受付を終了しました。">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="GPT友達紹介キャンペーン｜先着10名限定">
-  <meta property="og:description" content="メールアドレスだけで応募。対象条件を満たす方へ順番に招待をお送りします。">
+  <meta property="og:title" content="GPT友達紹介キャンペーン｜受付終了">
+  <meta property="og:description" content="友達招待キャンペーンの受付は終了しました。">
   <meta property="og:image" content="https://agi-gyoumusuper.github.io/butler-chat/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <title>GPT友達紹介キャンペーン｜先着10名限定</title>
+  <title>GPT友達紹介キャンペーン｜受付終了</title>
   <style>
     :root {
       --paper: #f7f4ec;
@@ -419,6 +420,20 @@
       line-height: 1.9;
     }
 
+    .closed-notice {
+      padding: 30px 0;
+      text-align: left;
+    }
+
+    .closed-notice h2 { margin-bottom: 14px; }
+
+    .closed-notice p {
+      margin: 0;
+      color: rgba(255, 255, 255, .72);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
     .footer {
       display: flex;
       justify-content: space-between;
@@ -480,137 +495,35 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span>GPT FRIEND INVITATION</span>
       </div>
-      <div class="seat-pill">募集枠 先着10名</div>
+      <div class="seat-pill">受付終了</div>
     </header>
 
     <section class="ticket" aria-labelledby="page-title">
       <div class="intro">
-        <p class="eyebrow">Friend referral campaign</p>
-        <h1 id="page-title">友達招待で<br><span class="accent">ChatGPT Pro</span>を<br>無料体験。</h1>
-        <p class="lead">ご利用条件を満たす方へ、友達紹介の招待をお送りします。応募に必要なのは、ChatGPTに登録するメールアドレスだけです。</p>
+        <p class="eyebrow">Friend referral campaign closed</p>
+        <h1 id="page-title">友達招待の<br><span class="accent">受付は終了</span><br>しました。</h1>
+        <p class="lead">ChatGPT Pro友達招待キャンペーンへのお申し込み受付は終了いたしました。</p>
 
-        <ul class="conditions" aria-label="応募条件">
-          <li><span class="check" aria-hidden="true">✓</span><span>過去2か月以内にCodexを利用していない方</span></li>
-          <li><span class="check" aria-hidden="true">✓</span><span>現在、有効な友達紹介の招待を受け取っていない方</span></li>
-          <li><span class="check" aria-hidden="true">✓</span><span>招待後、PC版ChatGPTアプリ内のCodexで1回メッセージを送れる方</span></li>
-          <li><span class="check" aria-hidden="true">✓</span><span>PCをお持ちの方</span></li>
+        <ul class="conditions" aria-label="受付状況">
+          <li><span class="check" aria-hidden="true">✓</span><span>新規のメールアドレス募集は停止しています</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span>入力済みメールアドレスの再送信は不要です</span></li>
         </ul>
       </div>
 
       <div class="form-panel">
-        <form id="invite-form" novalidate>
-          <div id="form-content">
-            <p class="form-kicker">10 SEATS · FIRST COME</p>
-            <h2>招待を申し込む</h2>
-            <p class="form-copy">確認後、対象となる方へ先着順で招待いたします。手作業のため、送付まで少々お時間をいただく場合がございます。</p>
-
-            <label class="field-label" for="email">ChatGPT登録用メールアドレス</label>
-            <div class="email-wrap">
-              <input class="email-input" id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@example.com" required aria-describedby="form-message">
-            </div>
-
-            <div class="honeypot" aria-hidden="true">
-              <label for="website">Webサイト</label>
-              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-            </div>
-
-            <button class="submit-button" id="submit-button" type="submit">メールアドレスを送る</button>
-            <p class="message" id="form-message" role="status" aria-live="polite"></p>
-            <p class="privacy">お預かりしたメールアドレスは、今回の友達招待にのみ使用します。招待の適用可否は、送付時の判定によって決まります。</p>
-          </div>
-
-          <div class="success" id="success" tabindex="-1" aria-live="polite">
-            <div class="success-mark" aria-hidden="true">✓</div>
-            <h2>応募を受け付けました</h2>
-            <p>ありがとうございます。条件を確認し、対象となる方へ先着順で招待をお送りします。送付までそのままお待ちください。</p>
-          </div>
-        </form>
+        <div class="closed-notice" role="status" aria-live="polite">
+          <p class="form-kicker">APPLICATION CLOSED</p>
+          <div class="success-mark" aria-hidden="true">✓</div>
+          <h2>受付を終了しました</h2>
+          <p>新規のお申し込みは受け付けておりません。メールアドレスの入力・送信機能は停止しています。</p>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
-      <span>個人運営の友達紹介受付ページです。</span>
-      <span>お一人様につき1つのメールアドレスでご応募ください。</span>
+      <span>ChatGPT Pro友達招待キャンペーン</span>
+      <span>受付終了</span>
     </footer>
   </main>
-
-  <script>
-    const ENDPOINT = "https://script.google.com/macros/s/AKfycbybIO476vfCWA1Fz65Vz2jP8GIvwIjDg3tDDadcXtBfU3VHlGlo-19OtZWxviSPrxOkXQ/exec";
-    const SUBMITTED_KEY = "gpt_friend_invite_submitted_202607_v1";
-    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    const form = document.getElementById("invite-form");
-    const formContent = document.getElementById("form-content");
-    const emailInput = document.getElementById("email");
-    const websiteInput = document.getElementById("website");
-    const submitButton = document.getElementById("submit-button");
-    const message = document.getElementById("form-message");
-    const success = document.getElementById("success");
-
-    function hasSubmitted() {
-      try { return localStorage.getItem(SUBMITTED_KEY) === "1"; }
-      catch (_) { return false; }
-    }
-
-    function markSubmitted() {
-      try { localStorage.setItem(SUBMITTED_KEY, "1"); }
-      catch (_) {}
-    }
-
-    function showSuccess() {
-      formContent.hidden = true;
-      success.classList.add("show");
-      success.focus();
-    }
-
-    if (hasSubmitted()) showSuccess();
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      message.textContent = "";
-
-      const email = emailInput.value.trim();
-      if (!email) {
-        message.textContent = "メールアドレスをご入力ください。";
-        emailInput.focus();
-        return;
-      }
-      if (!EMAIL_RE.test(email)) {
-        message.textContent = "メールアドレスの形式をご確認ください。";
-        emailInput.focus();
-        return;
-      }
-      if (websiteInput.value) {
-        showSuccess();
-        return;
-      }
-
-      submitButton.disabled = true;
-      submitButton.textContent = "送信しています…";
-
-      const payload = {
-        sender: "gpt-friend-invite-202607",
-        message: email,
-        email,
-        campaign: "gpt-friend-invite-202607",
-        submittedAt: new Date().toISOString()
-      };
-
-      try {
-        await fetch(ENDPOINT, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify(payload)
-        });
-        markSubmitted();
-        showSuccess();
-      } catch (_) {
-        message.textContent = "送信できませんでした。通信環境をご確認のうえ、もう一度お試しください。";
-        submitButton.disabled = false;
-        submitButton.textContent = "メールアドレスを送る";
-      }
-    });
-  </script>
 </body>
 </html>
